@@ -1,7 +1,9 @@
 using CityInfo.API;
 using CityInfo.API.Services;
 using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
+using System.Text;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -35,6 +37,30 @@ builder.Services.AddTransient<IMailService,CloudMailService>();
 
 builder.Services.AddSingleton<CitiesDataStore>();
 
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new()
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Authentication:Issuer"],
+            ValidAudience = builder.Configuration["Authentication:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.ASCII.GetBytes(builder.Configuration["Authentication:SecretForKey"]))
+        };
+    });
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("MustBeFromAntwerp", policy =>
+    {
+        policy.RequireAuthenticatedUser();
+        policy.RequireClaim("city", "Antwerp");
+    });
+});
+
 
 var app = builder.Build();
 
@@ -48,6 +74,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
