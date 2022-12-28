@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+nds273fhgfgouYXHsCPCMtKwvn1ML8OaEZp1yrKT6en5kEa8g1infm6aBEm1IY2PxHvAuTauuvYJ0+M4aWoHg==",
+  "dgSpecHash": "ENNmauLhHcgmZOcjqBbJ7CBrChu4pzSpTmWydLNoZmKU98QPwqa/vAJSM3zx+9d5KAxgNNv0SjvAtkkZe709OQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Stuart\\OneDrive\\CSharpProjects\\CityInfo.API\\CityInfo.API\\CityInfo.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stuart\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\Stuart\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.1\\microsoft.aspnetcore.jsonpatch.7.0.1.nupkg.sha512",
     "C:\\Users\\Stuart\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.10\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.10.nupkg.sha512",
+    "C:\\Users\\Stuart\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\Stuart\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Stuart\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Stuart\\.nuget\\packages\\microsoft.extensions.configuration\\2.0.0\\microsoft.extensions.configuration.2.0.0.nupkg.sha512",
