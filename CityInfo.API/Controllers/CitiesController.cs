@@ -62,5 +62,49 @@ namespace CityInfo.API.Controllers
                 return NotFound();
             }
         }
+
+        [HttpPost]
+        public async Task<ActionResult<CityDto>> CreateCity(CityDto city)
+        {
+            try
+            {
+                var cityToCreate = await _citiesDB.CreateAsync(city);
+
+                return Ok(cityToCreate);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+            
+
+        }
+
+        [HttpPut("{cityId}")]
+        public async Task<ActionResult> UpdateCity(string cityId, CityDto newCity)
+        {
+            var city = GetCity(cityId);
+            if (city == null)
+            {
+                return NotFound();
+            }
+            else if(cityId != newCity.Id) 
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                await _citiesDB.UpdateAsync(newCity);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+
+            return NoContent();
+        }
+
+
     }
 }
