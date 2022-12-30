@@ -13,7 +13,7 @@ namespace CityInfo.API
             {
                 new CityDto()
                 {
-                    Id = 1,
+                    Id = "1",
                     Name = "NEW BRANCH New York City",
                     Description = "The one with that big park.",
                     PointsOfInterest = new List<PointOfInterestDto>()
@@ -34,7 +34,7 @@ namespace CityInfo.API
                 },
                 new CityDto() 
                 {
-                    Id = 2,
+                    Id = "2",
                     Name = "Antwerp",
                     Description = "The one with the cathedral that was never really finished.",
                     PointsOfInterest = new List<PointOfInterestDto>()
@@ -55,7 +55,7 @@ namespace CityInfo.API
                 },
                 new CityDto() 
                 {
-                    Id = 3,
+                    Id = "3",
                     Name = "Paris",
                     Description = "The one with that big tower.",
                     PointsOfInterest = new List<PointOfInterestDto>()

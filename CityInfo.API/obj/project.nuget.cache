@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "+nds273fhgfgouYXHsCPCMtKwvn1ML8OaEZp1yrKT6en5kEa8g1infm6aBEm1IY2PxHvAuTauuvYJ0+M4aWoHg==",
+  "dgSpecHash": "QSLtF64Mpr/ZDU1z0FXNL4vzfmgv1cqP4MIqoLjA/Wx0lrlBcwYhBVUpbAMiRUInBSvNJg3w87tKsjjrwNveAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Stuart\\OneDrive\\CSharpProjects\\CityInfo.API\\CityInfo.API\\CityInfo.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Stuart\\.nuget\\packages\\awssdk.core\\3.7.103.6\\awssdk.core.3.7.103.6.nupkg.sha512",
+    "C:\\Users\\Stuart\\.nuget\\packages\\awssdk.dynamodbv2\\3.7.101.14\\awssdk.dynamodbv2.3.7.101.14.nupkg.sha512",
     "C:\\Users\\Stuart\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\Stuart\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.1\\microsoft.aspnetcore.jsonpatch.7.0.1.nupkg.sha512",
     "C:\\Users\\Stuart\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.10\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.10.nupkg.sha512",

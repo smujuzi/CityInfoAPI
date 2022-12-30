@@ -1,5 +1,8 @@
+using Amazon.DynamoDBv2;
 using CityInfo.API;
+using CityInfo.API.Repositories;
 using CityInfo.API.Services;
+using CityInfo.API.Settings;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
@@ -35,7 +38,10 @@ builder.Services.AddTransient<IMailService,LocalMailService>();
 builder.Services.AddTransient<IMailService,CloudMailService>();
 #endif
 
+builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection(DatabaseSettings.KeyName));
 builder.Services.AddSingleton<CitiesDataStore>();
+builder.Services.AddSingleton<IAmazonDynamoDB>(_ => new AmazonDynamoDBClient(Amazon.RegionEndpoint.EUWest1));
+builder.Services.AddSingleton<ICityRepository, CityRepository>();
 
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer(options =>

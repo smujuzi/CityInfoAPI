@@ -1,19 +1,25 @@
 ﻿
 using CityInfo.API.Models;
+using CityInfo.API.Repositories;
+using CityInfo.API.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CityInfo.API.Controllers
 {
     [ApiController]
-    [Authorize]
+    //[Authorize]
     [Route("api/cities")]
     public class CitiesController : ControllerBase
     {
         private readonly CitiesDataStore _citiesDataStore;
-        public CitiesController(CitiesDataStore citiesDataStore) 
+        private readonly ICityRepository _citiesDB;
+        private readonly ILogger<CitiesController> _logger;
+        public CitiesController(CitiesDataStore citiesDataStore, ICityRepository citiesDB, ILogger<CitiesController> logger) 
         {
             _citiesDataStore = citiesDataStore ?? throw new ArgumentNullException(nameof(citiesDataStore));
+            _citiesDB = citiesDB ?? throw new ArgumentNullException(nameof(citiesDB));
+            _logger = logger ?? throw new ArgumentNullException(nameof(_logger));
         }
 
         [HttpGet]
@@ -24,17 +30,37 @@ namespace CityInfo.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<CityDto> GetCity(int id)
+        public async Task<ActionResult<CityDto>> GetCity(string id)
         {
             //find city
-            var cityToReturn = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == id);
+            //var cityToReturn = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == id);
+            _logger.LogInformation("STUART LOG: I'm going in");
+            var cityToReturn = await _citiesDB.GetAsync(id);
 
-            if(cityToReturn == null) 
+
+            if (cityToReturn == null) 
             {
                 return NotFound();
             }
 
             return Ok(cityToReturn);
+        }
+
+        [HttpDelete("delete/{cityId}")]
+        public async Task<ActionResult> DeleteCity(string cityId)
+        {
+
+            try
+            {
+                _logger.LogInformation("STUART LOG: Going to delete");
+                var response = await _citiesDB.DeleteAsync(cityId);
+                return Ok(response);
+            }
+            catch (Exception ex) 
+            {
+                _logger.LogInformation("STUART LOG: Failed deletion");
+                return NotFound();
+            }
         }
     }
 }

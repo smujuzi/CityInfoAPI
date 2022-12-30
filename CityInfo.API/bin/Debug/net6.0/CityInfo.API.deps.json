@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "CityInfo.API/1.0.0": {
         "dependencies": {
+          "AWSSDK.DynamoDBv2": "3.7.101.14",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.0",
           "Microsoft.AspNetCore.JsonPatch": "7.0.1",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.10",
@@ -20,6 +21,25 @@
         },
         "runtime": {
           "CityInfo.API.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.103.6": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.103.6"
+          }
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.7.101.14": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.103.6"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.101.14"
+          }
         }
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.0": {
@@ -410,6 +430,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.7.103.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c9taEwfYXx7o94lDJrr9gJ94vGjwWiWjWKGIR0jOlIBZ6mtoW0sMXpqdbxvSa1eI9cU66wMfSmIEPrcvguwbHw==",
+      "path": "awssdk.core/3.7.103.6",
+      "hashPath": "awssdk.core.3.7.103.6.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2/3.7.101.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FoXR7KsGcd0konXhv6GEfTZOoMR5c4YU73iMSlj3OMQaGgOb0Ep3BfDPYPJrPySkJ3pbOkJNVmCSnqSeLKCeaw==",
+      "path": "awssdk.dynamodbv2/3.7.101.14",
+      "hashPath": "awssdk.dynamodbv2.3.7.101.14.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.0": {
       "type": "package",

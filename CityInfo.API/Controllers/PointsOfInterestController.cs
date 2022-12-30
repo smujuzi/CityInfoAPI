@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CityInfo.API.Controllers
 {
     [Route("api/cities/{cityId}/pointsofinterest")]
-    [Authorize(Policy = "MustBeFromAntwerp")]
+    //[Authorize(Policy = "MustBeFromAntwerp")]
     [ApiController]
     public class PointsOfInterestController : ControllerBase
     {
@@ -25,7 +25,7 @@ namespace CityInfo.API.Controllers
             _citiesDataStore = citiesDataStore ?? throw new ArgumentNullException(nameof(citiesDataStore));
         }
         [HttpGet]
-        public ActionResult<IEnumerable<PointOfInterestDto>> GetPointsOfInterest(int cityId)
+        public ActionResult<IEnumerable<PointOfInterestDto>> GetPointsOfInterest(string cityId)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace CityInfo.API.Controllers
 
         [HttpGet("{pointofinterestid}", Name = "GetPointOfInterest")]
         public ActionResult<PointOfInterestDto> GetPointOfInterest(
-            int cityId, int pointOfInterestId)
+            string cityId, int pointOfInterestId)
         {
             var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == cityId);
             if (city == null) 
@@ -73,7 +73,7 @@ namespace CityInfo.API.Controllers
 
         [HttpPost]
         public ActionResult<PointOfInterestDto> CreatePointOfInterest(
-            int cityId,
+            string cityId,
             PointOfInterestForCreationDto pointOfInterest)
         {
             var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == cityId);
@@ -105,7 +105,7 @@ namespace CityInfo.API.Controllers
         }
 
         [HttpPut("{pointofinterestid}")]
-        public ActionResult UpdatePointOfInterest(int cityId, int pointOfInterestId, PointOfInterestForUpdateDto pointOfInterest)
+        public ActionResult UpdatePointOfInterest(string cityId, int pointOfInterestId, PointOfInterestForUpdateDto pointOfInterest)
         {
             var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == cityId);
             if(city == null)
@@ -128,7 +128,7 @@ namespace CityInfo.API.Controllers
 
         [HttpPatch("{pointofinterestid}")]
         public ActionResult PartiallyUpdatePointOfInterest(
-            int cityId, int pointOfInterestId,
+            string cityId, int pointOfInterestId,
             JsonPatchDocument<PointOfInterestForUpdateDto> patchDocument)
         {
             var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == cityId);
@@ -169,7 +169,7 @@ namespace CityInfo.API.Controllers
         }
 
         [HttpDelete("{pointOfInterestId}")]
-        public ActionResult DeletePointOfInterest(int cityId, int pointOfInterestId) 
+        public ActionResult DeletePointOfInterest(string cityId, int pointOfInterestId) 
         {
             var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == cityId);
             if (city == null)
