@@ -2607,3 +2607,87 @@ System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport
 2022-12-30 23:47:31.983 +00:00 [INF] Executed endpoint 'CityInfo.API.Controllers.CitiesController.UpdateCity (CityInfo.API)'
 2022-12-30 23:47:31.990 +00:00 [DBG] Connection id "0HMNAO0RC7AF9" completed keep alive response.
 2022-12-30 23:47:31.999 +00:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7140/api/cities/1/ application/json 137 - 204 - - 1721.9534ms
+2022-12-30 23:53:23.172 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-12-30 23:53:23.346 +00:00 [DBG] Hosting starting
+2022-12-30 23:53:23.398 +00:00 [INF] User profile is available. Using 'C:\Users\Stuart\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-30 23:53:23.406 +00:00 [DBG] Reading data from file 'C:\Users\Stuart\AppData\Local\ASP.NET\DataProtection-Keys\key-6bdc38d1-9d61-4bbc-b88c-a55c3c5c50e3.xml'.
+2022-12-30 23:53:23.438 +00:00 [DBG] Found key {6bdc38d1-9d61-4bbc-b88c-a55c3c5c50e3}.
+2022-12-30 23:53:23.457 +00:00 [DBG] Considering key {6bdc38d1-9d61-4bbc-b88c-a55c3c5c50e3} with expiration date 2023-03-28 13:29:45Z as default key.
+2022-12-30 23:53:23.462 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-12-30 23:53:23.466 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2022-12-30 23:53:23.469 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-12-30 23:53:23.476 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2022-12-30 23:53:23.481 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2022-12-30 23:53:23.485 +00:00 [DBG] Using key {6bdc38d1-9d61-4bbc-b88c-a55c3c5c50e3} as the default key.
+2022-12-30 23:53:23.489 +00:00 [DBG] Key ring with default key {6bdc38d1-9d61-4bbc-b88c-a55c3c5c50e3} was loaded during application startup.
+2022-12-30 23:53:23.793 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 5155354C233AC09422874C062C08C1D70F62E7F0)
+2022-12-30 23:53:23.891 +00:00 [INF] Now listening on: https://localhost:7140
+2022-12-30 23:53:23.893 +00:00 [INF] Now listening on: http://localhost:5030
+2022-12-30 23:53:23.895 +00:00 [DBG] Loaded hosting startup assembly CityInfo.API
+2022-12-30 23:53:23.897 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-12-30 23:53:23.899 +00:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-12-30 23:53:23.902 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-30 23:53:23.903 +00:00 [INF] Hosting environment: Development
+2022-12-30 23:53:23.905 +00:00 [INF] Content root path: C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\
+2022-12-30 23:53:23.906 +00:00 [DBG] Hosting started
+2022-12-30 23:53:53.909 +00:00 [DBG] Connection id "0HMNAO4DPME04" received FIN.
+2022-12-30 23:53:53.943 +00:00 [DBG] Connection id "0HMNAO4DPME04" accepted.
+2022-12-30 23:53:53.951 +00:00 [DBG] Connection id "0HMNAO4DPME04" started.
+2022-12-30 23:53:53.953 +00:00 [DBG] Connection id "0HMNAO4DPME05" accepted.
+2022-12-30 23:53:53.955 +00:00 [DBG] Connection id "0HMNAO4DPME05" started.
+2022-12-30 23:53:54.003 +00:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-12-30 23:53:54.173 +00:00 [DBG] Connection 0HMNAO4DPME05 established using the following protocol: "Tls12"
+2022-12-30 23:53:54.199 +00:00 [DBG] Connection id "0HMNAO4DPME04" stopped.
+2022-12-30 23:53:54.203 +00:00 [DBG] Connection id "0HMNAO4DPME04" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-12-30 23:53:54.287 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:7140/api/cities/ application/json 155
+2022-12-30 23:53:54.347 +00:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-12-30 23:53:54.383 +00:00 [DBG] POST requests are not supported
+2022-12-30 23:53:54.443 +00:00 [DBG] 1 candidate(s) found for the request path '/api/cities/'
+2022-12-30 23:53:54.451 +00:00 [DBG] Endpoint 'CityInfo.API.Controllers.CitiesController.CreateCity (CityInfo.API)' with route pattern 'api/cities' is valid for the request path '/api/cities/'
+2022-12-30 23:53:54.455 +00:00 [DBG] Request matched endpoint 'CityInfo.API.Controllers.CitiesController.CreateCity (CityInfo.API)'
+2022-12-30 23:53:55.050 +00:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '28/12/2022 14:45:25', Current time: '30/12/2022 23:53:55'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-12-30 23:53:55.080 +00:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '28/12/2022 14:45:25', Current time: '30/12/2022 23:53:55'.
+2022-12-30 23:53:55.087 +00:00 [INF] Executing endpoint 'CityInfo.API.Controllers.CitiesController.CreateCity (CityInfo.API)'
+2022-12-30 23:53:55.142 +00:00 [INF] Route matched with {action = "CreateCity", controller = "Cities"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CityInfo.API.Models.CityDto]] CreateCity(CityInfo.API.Models.CityDto) on controller CityInfo.API.Controllers.CitiesController (CityInfo.API).
+2022-12-30 23:53:55.147 +00:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-12-30 23:53:55.149 +00:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-12-30 23:53:55.152 +00:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-12-30 23:53:55.155 +00:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-12-30 23:53:55.159 +00:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-12-30 23:53:55.164 +00:00 [DBG] Executing controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API)
+2022-12-30 23:53:55.383 +00:00 [DBG] Executed controller factory for controller CityInfo.API.Controllers.CitiesController (CityInfo.API)
+2022-12-30 23:53:55.409 +00:00 [DBG] Attempting to bind parameter 'city' of type 'CityInfo.API.Models.CityDto' ...
+2022-12-30 23:53:55.414 +00:00 [DBG] Attempting to bind parameter 'city' of type 'CityInfo.API.Models.CityDto' using the name '' in request data ...
+2022-12-30 23:53:55.418 +00:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2022-12-30 23:53:55.421 +00:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2022-12-30 23:53:55.441 +00:00 [DBG] Connection id "0HMNAO4DPME05", Request id "0HMNAO4DPME05:00000002": started reading request body.
+2022-12-30 23:53:55.446 +00:00 [DBG] Connection id "0HMNAO4DPME05", Request id "0HMNAO4DPME05:00000002": done reading request body.
+2022-12-30 23:53:55.614 +00:00 [DBG] Done attempting to bind parameter 'city' of type 'CityInfo.API.Models.CityDto'.
+2022-12-30 23:53:55.616 +00:00 [DBG] Done attempting to bind parameter 'city' of type 'CityInfo.API.Models.CityDto'.
+2022-12-30 23:53:55.619 +00:00 [DBG] Attempting to validate the bound parameter 'city' of type 'CityInfo.API.Models.CityDto' ...
+2022-12-30 23:53:55.635 +00:00 [DBG] Done attempting to validate the bound parameter 'city' of type 'CityInfo.API.Models.CityDto'.
+2022-12-30 23:53:55.679 +00:00 [INF] STUART LOG: citiesAsJSON: {"pk":"13","sk":"13","id":"13","name":"part 3 AWS P\u00E8re Lachaise","description":"part 3 AWS Famous cemetery where Jim Morrison and Oscar Wilde are buried.","numberOfPointsOfInterest":0,"PointsOfInterest":[]}
+2022-12-30 23:53:55.795 +00:00 [INF] STUART LOG: citiesAsJSON: {"pk":"13","sk":"13","id":"13","name":"part 3 AWS P\u00E8re Lachaise","description":"part 3 AWS Famous cemetery where Jim Morrison and Oscar Wilde are buried.","numberOfPointsOfInterest":0,"PointsOfInterest":[]}
+2022-12-30 23:53:55.803 +00:00 [INF] STUART LOG: citiesAsJSON: {"pk":"13","sk":"13","id":"13","name":"part 3 AWS P\u00E8re Lachaise","description":"part 3 AWS Famous cemetery where Jim Morrison and Oscar Wilde are buried.","numberOfPointsOfInterest":0,"PointsOfInterest":[]}
+2022-12-30 23:53:57.747 +00:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2022-12-30 23:53:57.756 +00:00 [DBG] No information found on request to perform content negotiation.
+2022-12-30 23:53:57.760 +00:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-12-30 23:53:57.762 +00:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-12-30 23:53:57.765 +00:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-12-30 23:53:57.769 +00:00 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2022-12-30 23:53:57.832 +00:00 [INF] Executed action CityInfo.API.Controllers.CitiesController.CreateCity (CityInfo.API) in 2665.3063ms
+2022-12-30 23:53:57.840 +00:00 [INF] Executed endpoint 'CityInfo.API.Controllers.CitiesController.CreateCity (CityInfo.API)'
+2022-12-30 23:53:57.854 +00:00 [DBG] Connection id "0HMNAO4DPME05" completed keep alive response.
+2022-12-30 23:53:57.861 +00:00 [INF] Request finished HTTP/1.1 POST https://localhost:7140/api/cities/ application/json 155 - 200 4 application/json;+charset=utf-8 3579.9027ms

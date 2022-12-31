@@ -29,8 +29,12 @@ namespace CityInfo.API.Repositories
         {
             //Need to print the output
             var citiesAsJson = JsonSerializer.Serialize(city);
+            _logger.LogInformation($"STUART LOG: citiesAsJSON: {citiesAsJson}");
             var itemAsDocument = Document.FromJson(citiesAsJson);
+            _logger.LogInformation($"STUART LOG: citiesAsJSON: {citiesAsJson}");
             var itemAsAttributes = itemAsDocument.ToAttributeMap();
+
+            _logger.LogInformation($"STUART LOG: citiesAsJSON: {citiesAsJson}");
 
             var createItemRequest = new PutItemRequest
             {
