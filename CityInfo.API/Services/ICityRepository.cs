@@ -1,12 +1,11 @@
 ﻿using CityInfo.API.Models;
 
-namespace CityInfo.API.Repositories
+namespace CityInfo.API.Services
 {
     public interface ICityRepository
     {
 
         Task<bool> CreateAsync(CityDto city);
-
 
         Task<CityDto?> GetAsync(string id);
 
