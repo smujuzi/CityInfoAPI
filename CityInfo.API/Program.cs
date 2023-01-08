@@ -8,87 +8,28 @@ using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.Text;
 
-Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Debug()
-    .WriteTo.Console()
-    .WriteTo.File("logs/cityinfo.txt", rollingInterval: RollingInterval.Day)
-    .CreateLogger();
-
-var builder = WebApplication.CreateBuilder(args);
-//builder.Logging.ClearProviders();
-//builder.Logging.AddConsole();
-
-builder.Host.UseSerilog();
-
-// Add services to the container.
-
-builder.Services.AddControllers(options =>
+namespace CityInfo.API
 {
-    options.ReturnHttpNotAcceptable = true;
-}).AddNewtonsoftJson()
-    .AddXmlDataContractSerializerFormatters();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
-
-#if DEBUG 
-builder.Services.AddTransient<IMailService,LocalMailService>();
-#else
-builder.Services.AddTransient<IMailService,CloudMailService>();
-#endif
-
-builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection(DatabaseSettings.KeyName));
-builder.Services.AddSingleton<CitiesDataStore>();
-builder.Services.AddSingleton<IAmazonDynamoDB>(_ => new AmazonDynamoDBClient(Amazon.RegionEndpoint.EUWest1));
-builder.Services.AddSingleton<ICityRepository, CityRepository>();
-
-builder.Services.AddAuthentication("Bearer")
-    .AddJwtBearer(options =>
+    public class Program
     {
-        options.TokenValidationParameters = new()
+        public static void Main(string[] args)
         {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateIssuerSigningKey = true,
-            ValidIssuer = builder.Configuration["Authentication:Issuer"],
-            ValidAudience = builder.Configuration["Authentication:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.ASCII.GetBytes(builder.Configuration["Authentication:SecretForKey"]))
-        };
-    });
+            try
+            {
+                CreateHostBuilder(args).Build().Run();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
 
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("MustBeFromAntwerp", policy =>
-    {
-        policy.RequireAuthenticatedUser();
-        policy.RequireClaim("city", "Antwerp");
-    });
-});
+        }
 
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseRouting();
-
-app.UseAuthentication();
-
-app.UseAuthorization();
-
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
-
-
-app.Run();

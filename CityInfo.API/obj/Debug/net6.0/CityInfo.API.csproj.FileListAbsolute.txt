@@ -56,3 +56,13 @@ C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6
 C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\AWSSDK.Core.dll
 C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\AWSSDK.DynamoDBv2.dll
+C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\Stuart\OneDrive\CSharpProjects\CityInfo.API\CityInfo.API\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll

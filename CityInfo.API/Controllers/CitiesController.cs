@@ -12,22 +12,21 @@ namespace CityInfo.API.Controllers
     [Route("api/cities")]
     public class CitiesController : ControllerBase
     {
-        private readonly CitiesDataStore _citiesDataStore;
         private readonly ICityRepository _citiesDB;
         private readonly ILogger<CitiesController> _logger;
-        public CitiesController(CitiesDataStore citiesDataStore, ICityRepository citiesDB, ILogger<CitiesController> logger) 
+        public CitiesController(ICityRepository citiesDB, ILogger<CitiesController> logger) 
         {
-            _citiesDataStore = citiesDataStore ?? throw new ArgumentNullException(nameof(citiesDataStore));
+            
             _citiesDB = citiesDB ?? throw new ArgumentNullException(nameof(citiesDB));
             _logger = logger ?? throw new ArgumentNullException(nameof(_logger));
         }
 
-        [HttpGet]
-        public ActionResult<IEnumerable<CityDto>> GetCities()
-        {
-            return Ok(_citiesDataStore.Cities);
+        //[HttpGet]
+        //public ActionResult<IEnumerable<CityWithoutPointsOfInterstDto>> GetCities()
+        //{
+        //    return Ok(_citiesDataStore.Cities);
                 
-        }
+        //}
 
         [HttpGet("{id}")]
         public async Task<ActionResult<CityDto>> GetCity(string id)
